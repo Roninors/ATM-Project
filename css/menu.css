@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body {
+  background-image: url("/pictures/atmbg1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+h1 {
+  text-align: center;
+  position: relative;
+  top: 110px;
+  color: rgb(240, 234, 234);
+  font-weight: 300;
+  font-family: "Poppins";
+}
+.wdrawImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  bottom: 195px;
+  left: 320px;
+  height: 200px;
+  width: 200px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+
+  cursor: pointer;
+}
+.wdrawImg:hover {
+  transition: 1s;
+  transform: translateY(-5%);
+}
+.depImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  top: 155px;
+  left: -300px;
+  width: 170px;
+  height: 200px;
+  padding-left: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 45px;
+
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.depImg:hover {
+  transition: 1s;
+  transform: translateY(-5%);
+}
+.depWord {
+  position: relative;
+  right: 300px;
+  top: 150px;
+  padding: 0;
+}
+
+.wdrawWord {
+  position: relative;
+  left: 325px;
+  top: -195px;
+  padding: 0;
+}
+.acclogo {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+.acclogo:active {
+  transition: 0.1s;
+
+  transform: translateY(4px);
+}
+

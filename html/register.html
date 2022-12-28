@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/js/register.js"></script>
+    <link rel="stylesheet" href="/css/register.css" />
+    <title>ATM</title>
+  </head>
+  <body>
+    <div class="titleHead">
+      <h1>VirtuBank</h1>
+    </div>
+
+    <div class="main-container">
+      <h1>Register</h1>
+      <div class="inputs">
+        <form class="regForm">
+          <input
+            placeholder="Account Name"
+            type="text"
+            name="AccountName"
+            id="username"
+          /><br />
+
+          <input
+            maxlength="4"
+            placeholder="PIN"
+            type="password"
+            name="passwordUser"
+            id="password"
+          />
+          <br />
+          <input
+            maxlength="10"
+            placeholder="Account Number"
+            type="number"
+            name="AccountNum"
+            id="accountNum"
+          />
+          <br />
+          <input
+            placeholder="Deposit"
+            type="number"
+            name="Balance"
+            id="balance"
+          />
+
+          <button type="submit" id="submitBtn">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

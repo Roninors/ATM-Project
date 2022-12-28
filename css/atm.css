@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  margin: auto;
+  font-family: "Poppins";
+}
+body {
+  background: linear-gradient(0.25turn, #6a49b8, #b884e4);
+}
+.titleHead {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 100px;
+  font-family: monospace;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+}
+.main-container {
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 130px;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+
+.inputs input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -2 px;
+  height: 30px;
+  width: 250px;
+  border-color: rgba(90, 129, 236, 0.336);
+  text-align: center;
+}
+::-webkit-input-placeholder {
+  font-size: 15px;
+}
+.main-container button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 60px;
+  height: 40px;
+  width: 200px;
+  background-color: #673147;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.main-container button:hover {
+  transition: 0.5s;
+  background-color: rgba(8, 231, 64, 0.918);
+}
+.main-container h1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50px;
+  color: #5875d6;
+  text-shadow: 1px 1px 2px black;
+}
+.main-container a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  font-size: 13px;
+}
+.main-container2 {
+  background-color: #ffffff;
+  position: relative;
+
+  top: 100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+.main-container2 button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 150px;
+  margin-top: 20px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  border-radius: 3px;
+}
+.main-container2 button:hover {
+  background-color: #39c434;
+  transition: 0.5s;
+}
+.main-container3 {
+  background-color: #ffffff;
+  position: relative;
+
+  top: 100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}

@@ -1,0 +1,41 @@
+{
+  "loggedin": [
+    {
+      "AccountName": "Maria Elena Josefa Manso",
+      "passwordUser": "3434",
+      "AccountNum": "98463749581",
+      "Balance": "9807500",
+      "id": "2"
+    }
+  ],
+  "admin": [
+    {
+      "username": "ronin",
+      "password": "admin123",
+      "id": 1
+    }
+  ],
+  "members": [
+    {
+      "AccountName": "Ronin Allyson Y. Manso",
+      "passwordUser": "0415",
+      "AccountNum": "293847593021",
+      "Balance": "14013",
+      "id": 1
+    },
+    {
+      "AccountName": "Maria Elena Josefa Manso",
+      "passwordUser": "3434",
+      "AccountNum": "98463749581",
+      "Balance": "9807500",
+      "id": 2
+    },
+    {
+      "AccountName": "Nino Roland Adlaon",
+      "passwordUser": "7348",
+      "AccountNum": "983683812",
+      "Balance": "5000",
+      "id": 3
+    }
+  ]
+}
