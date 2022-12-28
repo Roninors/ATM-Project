@@ -4,7 +4,10 @@
       "AccountName": "Maria Elena Josefa Manso",
       "passwordUser": "3434",
       "AccountNum": "98463749581",
-      "Balance": "9807500",
+      "Balance": "9807000",
+      "records": [
+       
+      ],
       "id": "2"
     }
   ],
@@ -27,7 +30,7 @@
       "AccountName": "Maria Elena Josefa Manso",
       "passwordUser": "3434",
       "AccountNum": "98463749581",
-      "Balance": "9807500",
+      "Balance": "9807000",
       "id": 2
     },
     {

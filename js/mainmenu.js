@@ -56,12 +56,13 @@ let updateAdmin2 = async () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(objectBalance),
   });
+  await recordWdraw()
 };
 
 otherBtn.addEventListener("click", () => {
   window.location.href = "wdraw.html";
 });
-/*
+
 let recordWdraw = async () => {
   arrayAlter = recordArray;
   arrayAlter.push({
@@ -80,5 +81,5 @@ let recordWdraw = async () => {
   });
 };
 
-*/
+
 
