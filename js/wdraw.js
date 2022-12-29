@@ -3,9 +3,7 @@ let clearBtn = document.getElementById("clearBtn");
 let wdrawInp = document.getElementById("inp1");
 let wdrawFunc1 = () => {
   if (wdrawInp.value == "") {
-    notify.innerHTML = "Enter Amount";
-    openPopup();
-    closenotify.innerHTML = `<button  onclick = "closePopup()" class = "close-notify">OK</button>`;
+    alert("Insufficient Funds")
     return;
   }
   fetch("http://localhost:3000/loggedin")
