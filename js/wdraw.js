@@ -1,9 +1,19 @@
+let redirect = async () => {
+  const res = await fetch("http://localhost:3000/loggedin");
+  const data = await res.json();
+
+  if (data == "") {
+    window.location.href = "/html/atm.html";
+  }
+};
+document.addEventListener("DOMContentLoaded", redirect());
+
 let cancelBtn = document.getElementById("cancelBtn");
 let clearBtn = document.getElementById("clearBtn");
 let wdrawInp = document.getElementById("inp1");
 let wdrawFunc1 = () => {
   if (wdrawInp.value == "") {
-    alert("Insufficient Funds")
+    alert("Enter Withdraw Amount");
     return;
   }
   fetch("http://localhost:3000/loggedin")
@@ -12,12 +22,12 @@ let wdrawFunc1 = () => {
       let withdrawAmount = document.getElementById("inp1").value;
       let zeroBal = JSON.parse('{ "Balance": "0" }');
       if (json[0].Balance == zeroBal.Balance) {
-       alert("Insufficient Funds")
+        alert("Insufficient Funds");
         return;
       } else {
         var newBal = json[0].Balance - withdrawAmount;
         if (Math.sign(newBal) === -1) {
-          alert("Insufficient Funds")
+          alert("Insufficient Funds");
           return;
         }
         var obj = {

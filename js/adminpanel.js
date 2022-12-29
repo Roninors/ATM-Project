@@ -77,9 +77,9 @@ function gettingVal(id) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newdata),
   });
-  atmUpdate(id);
+  updateDb(id);
 }
-let atmUpdate = (id) => {
+let updateDb = (id) => {
   let mynewbalance = document.querySelector(".formbal");
 
   const form = new FormData(mynewbalance);

@@ -71,7 +71,7 @@ h1 {
 .wdrawWord {
   position: relative;
   left: 325px;
-  top: -195px;
+  top: -200px;
   padding: 0;
 }
 .acclogo {
@@ -88,3 +88,20 @@ h1 {
   transform: translateY(4px);
 }
 
+
+.logout-logo{
+  float: right;
+  margin-right: 16px;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.logout-logo:active {
+  transition: 0.1s;
+
+  transform: translateY(4px);
+}

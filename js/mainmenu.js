@@ -13,6 +13,9 @@ let recordArray;
 let accountInf = async () => {
   const res = await fetch("http://localhost:3000/loggedin");
   const data = await res.json();
+  if (data == "") {
+    window.location.href = "/html/atm.html";
+  }
   jsonbalance = data[0].Balance;
   myUrl2 = `http://localhost:3000/members/${data[0].id}`;
   myUrl = `http://localhost:3000/loggedin/${data[0].id}`;
@@ -21,9 +24,7 @@ let accountInf = async () => {
 document.addEventListener("DOMContentLoaded", accountInf());
 
 buttons.map((button) => {
-
-  button.addEventListener("click",  () => {
-    
+  button.addEventListener("click", () => {
     buttonVal = button.textContent;
     if (jsonbalance == zeroBal.Balance) {
       alert("Insufficient Funds");
@@ -37,12 +38,10 @@ buttons.map((button) => {
       objectBalance = {
         Balance: `${newBal}`,
       };
-      
+      updateDb();
     }
-    updateDb()
   });
 });
-
 
 let updateDb = async () => {
   await fetch(myUrl, {
@@ -56,7 +55,7 @@ let updateDb = async () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(objectBalance),
   });
- // await recordWdraw()
+  // await recordWdraw()
 };
 
 otherBtn.addEventListener("click", () => {
@@ -82,5 +81,3 @@ let recordWdraw = async () => {
   
 };
 */
-
-

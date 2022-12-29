@@ -1,13 +1,5 @@
 {
-  "loggedin": [
-    {
-      "AccountName": "Maria Elena Josefa Manso",
-      "passwordUser": "3434",
-      "AccountNum": "98463749581",
-      "Balance": "62200",
-      "id": "2"
-    }
-  ],
+  "loggedin": [],
   "admin": [
     {
       "username": "ronin",
@@ -25,9 +17,9 @@
     },
     {
       "AccountName": "Maria Elena Josefa Manso",
-      "passwordUser": "3434",
+      "passwordUser": "2222",
       "AccountNum": "98463749581",
-      "Balance": "62200",
+      "Balance": "50200",
       "id": 2
     },
     {
