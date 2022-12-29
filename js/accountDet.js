@@ -1,13 +1,3 @@
-let redirect = async () => {
-  const res = await fetch("http://localhost:3000/loggedin");
-  const data = await res.json();
-
-  if (data == "") {
-    window.location.href = "/html/atm.html";
-  }
-};
-document.addEventListener("DOMContentLoaded", redirect());
-
 let btn = document.querySelector(".btn-holder");
 let url1;
 let url2;
@@ -17,6 +7,9 @@ let userId;
 let accountInf = async () => {
   const res = await fetch("http://localhost:3000/loggedin");
   const data = await res.json();
+  if (data == "") {
+    window.location.href = "/html/atm.html";
+  }
   let accNum = document.querySelector(".accnumber");
   let bal = document.querySelector(".balance");
   let accName = document.querySelector(".accountName");
