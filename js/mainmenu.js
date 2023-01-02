@@ -10,12 +10,10 @@ let objectBalance;
 let arrayAlter = [];
 let recObj;
 let recordArray;
+let popup = document.getElementById("popup");
 let accountInf = async () => {
   const res = await fetch("http://localhost:3000/loggedin");
   const data = await res.json();
-  if (data == "") {
-    window.location.href = "/html/atm.html";
-  }
   jsonbalance = data[0].Balance;
   myUrl2 = `http://localhost:3000/members/${data[0].id}`;
   myUrl = `http://localhost:3000/loggedin/${data[0].id}`;
@@ -38,7 +36,8 @@ buttons.map((button) => {
       objectBalance = {
         Balance: `${newBal}`,
       };
-      updateDb();
+
+      openPopup();
     }
   });
 });
@@ -55,13 +54,22 @@ let updateDb = async () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(objectBalance),
   });
-  // await recordWdraw()
 };
 
 otherBtn.addEventListener("click", () => {
   window.location.href = "wdraw.html";
 });
+
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
+
 /*
+
 let recordWdraw = async () => {
   arrayAlter = recordArray;
   arrayAlter.push({

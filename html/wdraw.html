@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/redirector.js"></script>
     <script defer src="/js/wdraw.js"></script>
     <link rel="stylesheet" href="/css/wdraw.css" />
+    <link rel="stylesheet" href="/css/mainmenupop.css">
     <title>Document</title>
   </head>
   <body>
@@ -16,9 +18,16 @@
 <form><input type="number" id="inp1" placeholder="Withdraw" /></form>
     
     <div class="btn-container">
-      <button onclick="wdrawFunc1()" class="grid-btn">Submit</button>
+      <button id = "submitButton"  class="grid-btn">Submit</button>
       <button id="cancelBtn" class="grid-btn">Cancel</button>
       <button id="clearBtn" class="grid-btn">Clear</button>
     </div>
+
+    <div class="pop-container">
+      <div class="popup" id="popup">
+        <p> Do you want to print a receipt?</p>
+        <button onclick = "wdrawFunc1();">YES</button>
+        <button onclick = "closePopup();wdrawFunc1();">NO</button>
+      </div>
   </body>
 </html>

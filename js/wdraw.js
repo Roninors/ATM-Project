@@ -1,21 +1,17 @@
-let redirect = async () => {
-  const res = await fetch("http://localhost:3000/loggedin");
-  const data = await res.json();
-
-  if (data == "") {
-    window.location.href = "/html/atm.html";
-  }
-};
-document.addEventListener("DOMContentLoaded", redirect());
-
+let submitEl = document.getElementById("submitButton");
 let cancelBtn = document.getElementById("cancelBtn");
 let clearBtn = document.getElementById("clearBtn");
 let wdrawInp = document.getElementById("inp1");
-let wdrawFunc1 = () => {
+
+submitEl.addEventListener("click", () => {
   if (wdrawInp.value == "") {
     alert("Enter Withdraw Amount");
     return;
   }
+  openPopup();
+});
+
+let wdrawFunc1 = () => {
   fetch("http://localhost:3000/loggedin")
     .then((res) => res.json())
     .then((json) => {
@@ -40,7 +36,6 @@ let wdrawFunc1 = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(obj),
         });
-
         updateAdmin1();
       }
     })
@@ -76,3 +71,11 @@ cancelBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   wdrawInp.value = "";
 });
+
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+}

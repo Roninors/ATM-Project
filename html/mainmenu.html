@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <script src="/js/redirector.js"></script>
     <link rel="stylesheet" href="/css/mainmenu.css" />
     <script defer src="/js/mainmenu.js"></script>
+    <link rel="stylesheet" href="/css/mainmenupop.css">
     <!--<script defer src="/js/mainmenu.js"></script>-->
     <title>Document</title>
   </head>
@@ -29,5 +31,11 @@
       </div>
     </div>
     </div>
+    <div class="pop-container">
+      <div class="popup" id="popup">
+        <p> Do you want to print a receipt?</p>
+        <button onclick = "">YES</button>
+        <button onclick = "closePopup();updateDb();">NO</button>
+      </div>
   </body>
 </html>
