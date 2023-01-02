@@ -7,12 +7,12 @@ let memberFunc = () => {
     .then((res) => res.json())
     .then((json) => {
       let pass = document.getElementById("password").value;
-      let user = document.getElementById("username").value;
-      let parseduser = JSON.parse(`{"AccountName":"${user}" }`);
+      let accnum = document.getElementById("username").value;
+      let parseduser = JSON.parse(`{"AccountNum":"${accnum}" }`);
       let parsedpass = JSON.parse(`{"passwordUser":"${pass}" }`);
 
       if (
-        parseduser.AccountName == json[0].AccountName &&
+        parseduser.AccountNum == json[0].AccountNum &&
         parsedpass.passwordUser == json[0].passwordUser
       ) {
         let loggedIn = {
