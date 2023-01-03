@@ -16,11 +16,11 @@ let memberFunc = () => {
         parsedpass.passwordUser == json[0].passwordUser
       ) {
         let loggedIn = {
-          AccountName: `${json[0].AccountName}`,
-          passwordUser: `${json[0].passwordUser}`,
-          AccountNum: `${json[0].AccountNum}`,
-          Balance: `${json[0].Balance}`,
-          id: `${json[0].id}`,
+          AccountName: json[0].AccountName,
+          passwordUser: json[0].passwordUser,
+          AccountNum: json[0].AccountNum,
+          Balance: json[0].Balance,
+          id: json[0].id,
         };
         fetch("http://localhost:3000/loggedin", {
           method: "POST",

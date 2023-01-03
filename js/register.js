@@ -1,23 +1,37 @@
-const regiForm = document.querySelector(".regForm");
-
-regiForm.addEventListener("submit", (event) => {
+let accName = document.getElementById("accName");
+let accNum = document.getElementById("accNum");
+let pin = document.getElementById("pin");
+let deposit = document.getElementById("deposit");
+let btnEl = document.getElementById("submitBtn");
+let uniqueId = Date.now();
+let stringId = String(uniqueId);
+let random_accountNumber = stringId.slice(5);
+let random_pin = stringId.slice(9);
+accNum.value = random_accountNumber;
+pin.value = random_pin;
+btnEl.addEventListener("click", (event) => {
   event.preventDefault();
 
-  if (username.value == "") {
+  if (accName.value == "") {
     alert("please input username");
-  } else if (password.value == "") {
+  } else if (pin.value == "") {
     alert("please input password");
-  } else if (accountNum.value == "") {
+  } else if (accNum.value == "") {
     alert("please input account number");
-  } else if (balance.value == "") {
+  } else if (deposit.value == "") {
     alert(" deposit a money first");
   } else {
-    const form_data = new FormData(regiForm);
-    let data = Object.fromEntries(form_data);
+    let regUser = {
+      AccountName: accName.value,
+      passwordUser: pin.value,
+      AccountNum: accNum.value,
+      Balance: deposit.value,
+    };
+
     fetch("http://localhost:3000/members", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(regUser),
     });
   }
 });
