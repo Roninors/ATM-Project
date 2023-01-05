@@ -1,11 +1,11 @@
 {
   "loggedin": [
     {
-      "AccountName": "JANE",
-      "passwordUser": "0567",
-      "AccountNum": "36930567",
-      "Balance": "2333",
-      "id": 5
+      "AccountName": "Zhan",
+      "passwordUser": "2222",
+      "AccountNum": "993733",
+      "Balance": "5119591",
+      "id": 3
     }
   ],
   "admin": [
@@ -17,17 +17,17 @@
   ],
   "members": [
     {
-      "AccountName": "Ronin Allyson Y. Manso",
-      "passwordUser": "0415",
-      "AccountNum": "1212144",
-      "Balance": "26013",
+      "AccountName": "hello",
+      "passwordUser": "2322",
+      "AccountNum": "2222",
+      "Balance": "10381",
       "id": 1
     },
     {
       "AccountName": "Maria Elena Josefa Manso",
       "passwordUser": "1222",
       "AccountNum": "9374733",
-      "Balance": "666624",
+      "Balance": "665413",
       "id": 2
     },
     {
@@ -38,10 +38,10 @@
       "id": 3
     },
     {
-      "AccountName": "aljun",
-      "passwordUser": "2323",
-      "AccountNum": "1212144",
-      "Balance": "112222",
+      "AccountName": "ronin",
+      "passwordUser": "6666",
+      "AccountNum": "1222212",
+      "Balance": "115600",
       "id": 4
     },
     {
@@ -50,6 +50,57 @@
       "AccountNum": "36930567",
       "Balance": "2333",
       "id": 5
+    },
+    {
+      "AccountName": "Red",
+      "passwordUser": "4789",
+      "AccountNum": "19674789",
+      "Balance": "50000",
+      "id": 6
+    }
+  ],
+  "records": [
+    {
+      "record_name": "Ronin Allyson Y. Manso",
+      "record_accnum": "1212144",
+      "record_balance": "5971",
+      "recordId": 1,
+      "id": 1
+    },
+    {
+      "record_name": "Ronin Allyson Y. Manso",
+      "record_accnum": "1212144",
+      "record_balance": "5960",
+      "recordId": 1,
+      "id": 2
+    },
+    {
+      "record_name": "Ronin Allyson Y. Manso",
+      "record_accnum": "1212144",
+      "record_balance": "5938",
+      "recordId": 1,
+      "id": 3
+    },
+    {
+      "record_name": "Maria Elena Josefa Manso",
+      "record_accnum": "9374733",
+      "record_balance": "665413",
+      "recordId": 2,
+      "id": 4
+    },
+    {
+      "record_name": "Ronin Allyson Y. Manso",
+      "record_accnum": "1212144",
+      "record_balance": "1938",
+      "recordId": 1,
+      "id": 5
+    },
+    {
+      "record_name": "Ronin Allyson Y. Manso",
+      "record_accnum": "1212144",
+      "record_balance": "3048",
+      "recordId": 1,
+      "id": 6
     }
   ]
 }

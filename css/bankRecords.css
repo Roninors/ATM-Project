@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  font-family: "Poppins";
+  margin: auto;
+}
+th,
+td,
+tr {
+  border: 1px solid rgba(0, 0, 0, 0);
+  text-align: center;
+  padding: 10px;
+}
+th {
+  background-color: black;
+  color: white;
+}
+td {
+  background-color: rgba(116, 108, 108, 0.178);
+}
+table {
+  border-collapse: collapse;
+}
+.editBtn {
+  cursor: pointer;
+}
+.editBtn:hover {
+  color: rgb(231, 57, 57);
+}

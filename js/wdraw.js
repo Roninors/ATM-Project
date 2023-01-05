@@ -7,8 +7,14 @@ submitEl.addEventListener("click", () => {
   if (wdrawInp.value == "") {
     alert("Enter Withdraw Amount");
     return;
+  } else {
+    if (Math.sign(wdrawInp.value) === -1) {
+      alert("Do not put invalid values");
+      return;
+    }
+    wdrawFunc1()
+    //openPopup();
   }
-  openPopup();
 });
 
 let wdrawFunc1 = () => {
@@ -58,11 +64,38 @@ let updateAdmin1 = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(obj2),
       });
+      postRecords()
     })
     .catch(function () {
       console.log("error");
     });
 };
+
+let postRecords =  ()=>{
+  fetch("http://localhost:3000/loggedin")
+  .then((res) => res.json())
+  .then((json) => {
+    var recordObj = {
+      record_name: json[0].AccountName,
+      record_accnum: json[0].AccountNum,
+      record_balance: json[0].Balance,
+      recordId: json[0].id
+    };
+    let url = `http://localhost:3000/records`;
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(recordObj),
+    });
+    
+  })
+  .catch(function () {
+    console.log("error");
+  });
+}
+
+
+
 
 cancelBtn.addEventListener("click", () => {
   window.location.href = "mainmenu.html";
@@ -71,7 +104,7 @@ cancelBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   wdrawInp.value = "";
 });
-
+/*
 function openPopup() {
   popup.classList.add("open-popup");
 }
@@ -79,3 +112,4 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open-popup");
 }
+*/
