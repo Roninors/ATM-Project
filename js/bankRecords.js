@@ -19,10 +19,11 @@ let getInfo = async () => {
   
   document.addEventListener("DOMContentLoaded", getId());
 
-  function showRecords({ record_name,record_accnum , record_balance, recordId}) {
+  function showRecords({ record_type,record_date , record_balance, record_amount,record_time}) {
     let myTr = document.createElement("tr");
-    myTr.innerHTML = `<td>${record_name}</td>
-  <td>${record_accnum}</td>
-  <td  >${record_balance}</td><td >${recordId}</td><td>`;
+    myTr.innerHTML = `<td>${record_type}</td>
+  <td>${record_date}</td>
+  <td>${record_time}</td>
+  <td  >${record_amount}</td><td >${record_balance}</td><td>`;
     return myTr;
   }

@@ -2,7 +2,7 @@ let submitEl = document.getElementById("submitButton");
 let cancelBtn = document.getElementById("cancelBtn");
 let clearBtn = document.getElementById("clearBtn");
 let wdrawInp = document.getElementById("inp1");
-
+let withdrawAmount;
 submitEl.addEventListener("click", () => {
   if (wdrawInp.value == "") {
     alert("Enter Withdraw Amount");
@@ -21,7 +21,7 @@ let wdrawFunc1 = () => {
   fetch("http://localhost:3000/loggedin")
     .then((res) => res.json())
     .then((json) => {
-      let withdrawAmount = document.getElementById("inp1").value;
+       withdrawAmount = document.getElementById("inp1").value;
       let zeroBal = JSON.parse('{ "Balance": "0" }');
       if (json[0].Balance == zeroBal.Balance) {
         alert("Insufficient Funds");
@@ -76,8 +76,10 @@ let postRecords =  ()=>{
   .then((res) => res.json())
   .then((json) => {
     var recordObj = {
-      record_name: json[0].AccountName,
-      record_accnum: json[0].AccountNum,
+      record_type: "Withdraw",
+      record_date:`${new Date().getMonth()+1} / ${new Date().getDate()}/ ${new Date().getFullYear()}`,
+      record_time : `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
+      record_amount: withdrawAmount,
       record_balance: json[0].Balance,
       recordId: json[0].id
     };

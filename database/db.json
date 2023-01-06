@@ -1,10 +1,10 @@
 {
   "loggedin": [
     {
-      "AccountName": "Zhan",
-      "passwordUser": "2222",
+      "AccountName": "hellzzzo",
+      "passwordUser": "3333",
       "AccountNum": "993733",
-      "Balance": "5119591",
+      "Balance": "105476868",
       "id": 3
     }
   ],
@@ -31,10 +31,10 @@
       "id": 2
     },
     {
-      "AccountName": "Zhan",
-      "passwordUser": "2222",
+      "AccountName": "hellzzzo",
+      "passwordUser": "3333",
       "AccountNum": "993733",
-      "Balance": "5119591",
+      "Balance": "105479201",
       "id": 3
     },
     {
@@ -61,46 +61,67 @@
   ],
   "records": [
     {
-      "record_name": "Ronin Allyson Y. Manso",
-      "record_accnum": "1212144",
-      "record_balance": "5971",
-      "recordId": 1,
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 18 : 3",
+      "record_amount": "2688",
+      "record_balance": "105486267",
+      "recordId": 3,
       "id": 1
     },
     {
-      "record_name": "Ronin Allyson Y. Manso",
-      "record_accnum": "1212144",
-      "record_balance": "5960",
-      "recordId": 1,
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 18 : 6",
+      "record_amount": "1000",
+      "record_balance": "105485267",
+      "recordId": 3,
       "id": 2
     },
     {
-      "record_name": "Ronin Allyson Y. Manso",
-      "record_accnum": "1212144",
-      "record_balance": "5938",
-      "recordId": 1,
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 18 : 8",
+      "record_amount": "2222",
+      "record_balance": "105483045",
+      "recordId": 3,
       "id": 3
     },
     {
-      "record_name": "Maria Elena Josefa Manso",
-      "record_accnum": "9374733",
-      "record_balance": "665413",
-      "recordId": 2,
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 18 : 13",
+      "record_amount": "400",
+      "record_balance": "105482645",
+      "recordId": 3,
       "id": 4
     },
     {
-      "record_name": "Ronin Allyson Y. Manso",
-      "record_accnum": "1212144",
-      "record_balance": "1938",
-      "recordId": 1,
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 19 : 44",
+      "record_amount": "2444",
+      "record_balance": "105480201",
+      "recordId": 3,
       "id": 5
     },
     {
-      "record_name": "Ronin Allyson Y. Manso",
-      "record_accnum": "1212144",
-      "record_balance": "3048",
-      "recordId": 1,
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 19 : 48",
+      "record_amount": "1000",
+      "record_balance": "105479201",
+      "recordId": 3,
       "id": 6
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 19 : 53",
+      "record_amount": "2333",
+      "record_balance": "105476868",
+      "recordId": 3,
+      "id": 7
     }
   ]
 }
