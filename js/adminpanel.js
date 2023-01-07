@@ -8,6 +8,7 @@ let balance = document.getElementById("balance");
 let userObj;
 let url;
 
+
 let showAccounts = async () => {
   const res = await fetch("http://localhost:3000/members");
   const json = await res.json();
@@ -19,9 +20,16 @@ let showAccounts = async () => {
 
 document.addEventListener("DOMContentLoaded", showAccounts());
 
+let registerLoad = () => {
+  window.location.href = "/html/register.html"
+}
 //search function
 async function search() {
   let searchVal = document.getElementById("searchInp").value;
+ if(!searchVal){
+  alert("Cannot Search")
+  return;
+ }
 
   let url = `http://localhost:3000/members?q=${searchVal}`;
   const res = await fetch(url);
