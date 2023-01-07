@@ -1,52 +1,69 @@
 let cancelBtn = document.getElementById("cancelBtn");
 let clearBtn = document.getElementById("clearBtn");
 let depInp = document.getElementById("inp1");
-let depFunc = () => {
+let notifyName = document.getElementById("notify");
+let depAmount;
+let depBal;
+let url1;
+let url2;
+let obj;
+
+let depFunc = async () => {
   if (depInp.value == "") {
-    alert("Please enter amount");
+    notifyName.innerText = "Please input amount to deposit";
+    openPopup();
     return;
   }
-  fetch("http://localhost:3000/loggedin")
-    .then((res) => res.json())
-    .then((json) => {
-      let depAmount = document.getElementById("inp1").value;
-      let depBal = +depAmount + +json[0].Balance;
-      var obj = {
-        Balance: `${depBal}`,
-      };
-      let url = `http://localhost:3000/loggedin/${json[0].id}`;
+  const res = await fetch("http://localhost:3000/loggedin");
+  const json = await res.json();
 
-      fetch(url, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(obj),
-      });
+  depAmount = document.getElementById("inp1").value;
+  depBal = +depAmount + +json[0].Balance;
 
-      updateAdmin1();
-    })
-    .catch(function () {
-      console.log("error");
-    });
+  obj = {
+    Balance: `${depBal}`,
+  };
+  url1 = `http://localhost:3000/loggedin/${json[0].id}`;
+  url2 = `http://localhost:3000/members/${json[0].id}`;
+
+  await updateDb();
 };
 
-let updateAdmin1 = () => {
-  fetch("http://localhost:3000/loggedin")
-    .then((res) => res.json())
-    .then((json) => {
-      var obj2 = {
-        Balance: `${json[0].Balance}`,
-      };
-      let url = `http://localhost:3000/members/${json[0].id}`;
+let updateDb = async () => {
+  await fetch(url1, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj),
+  });
 
-      fetch(url, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(obj2),
-      });
-    })
-    .catch(function () {
-      console.log("error");
-    });
+  await fetch(url2, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj),
+  });
+  await postRecords();
+};
+
+let postRecords = async () => {
+  const res = await fetch("http://localhost:3000/loggedin");
+  const json = await res.json();
+
+  let recordObj = {
+    record_type: "Deposit",
+    record_date: `${
+      new Date().getMonth() + 1
+    } / ${new Date().getDate()}/ ${new Date().getFullYear()}`,
+    record_time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
+    record_amount: depAmount,
+    record_balance: json[0].Balance,
+    recordId: json[0].id,
+  };
+
+  fetch("http://localhost:3000/records", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(recordObj),
+  });
 };
 
 cancelBtn.addEventListener("click", () => {
@@ -56,3 +73,11 @@ cancelBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   depInp.value = "";
 });
+
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+}

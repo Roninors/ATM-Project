@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", accountInf());
 
 let appendInp = () => {
   let pin = document.querySelector(".pin");
-  pin.innerHTML = `<input type = "text" class ="pin-input" placeholder ="Pin" maxlength="4">`;
+  pin.innerHTML = `<input type = "password" class ="pin-input" placeholder ="Pin" maxlength="4">`;
   btn.innerHTML = `<button class ="submitBtn" onclick = "updateDb()">Submit</button>`;
 };
 

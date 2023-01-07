@@ -1,11 +1,11 @@
 {
   "loggedin": [
     {
-      "AccountName": "hellzzzo",
-      "passwordUser": "3333",
-      "AccountNum": "993733",
-      "Balance": "105476868",
-      "id": 3
+      "AccountName": "Maria Elena Josefa Manso",
+      "passwordUser": "1212",
+      "AccountNum": "9374733",
+      "Balance": "201978",
+      "id": 2
     }
   ],
   "admin": [
@@ -25,16 +25,16 @@
     },
     {
       "AccountName": "Maria Elena Josefa Manso",
-      "passwordUser": "1222",
+      "passwordUser": "1212",
       "AccountNum": "9374733",
-      "Balance": "665413",
+      "Balance": "201978",
       "id": 2
     },
     {
       "AccountName": "hellzzzo",
-      "passwordUser": "3333",
+      "passwordUser": "1212",
       "AccountNum": "993733",
-      "Balance": "105479201",
+      "Balance": "105474468",
       "id": 3
     },
     {
@@ -122,6 +122,204 @@
       "record_balance": "105476868",
       "recordId": 3,
       "id": 7
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "1 : 23 : 44",
+      "record_amount": "1000",
+      "record_balance": "105475868",
+      "recordId": 3,
+      "id": 8
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "14 : 34 : 13",
+      "record_amount": "10000",
+      "record_balance": "655413",
+      "recordId": 2,
+      "id": 9
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "14 : 34 : 39",
+      "record_amount": "333",
+      "record_balance": "655080",
+      "recordId": 2,
+      "id": 10
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "14 : 34 : 41",
+      "record_amount": "153",
+      "record_balance": "654927",
+      "recordId": 2,
+      "id": 11
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "14 : 34 : 44",
+      "record_amount": "1000",
+      "record_balance": "653927",
+      "recordId": 2,
+      "id": 12
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "14 : 52 : 13",
+      "record_amount": "10000",
+      "record_balance": "643927",
+      "recordId": 2,
+      "id": 13
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "14 : 56 : 0",
+      "record_amount": "1222",
+      "record_balance": "642705",
+      "recordId": 2,
+      "id": 14
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "15 : 0 : 36",
+      "record_amount": "642005",
+      "record_balance": "0",
+      "recordId": 2,
+      "id": 15
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "16 : 32 : 34",
+      "record_amount": "12111",
+      "record_balance": "99000",
+      "recordId": 2,
+      "id": 16
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "16 : 32 : 54",
+      "record_amount": "12111",
+      "record_balance": "86889",
+      "recordId": 2,
+      "id": 17
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "16 : 33 : 53",
+      "record_amount": "1211",
+      "record_balance": "85678",
+      "recordId": 2,
+      "id": 18
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "16 : 34 : 4",
+      "record_amount": "1211",
+      "record_balance": "84467",
+      "recordId": 2,
+      "id": 19
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "16 : 38 : 43",
+      "record_amount": "12111",
+      "record_balance": "72356",
+      "recordId": 2,
+      "id": 20
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "16 : 38 : 52",
+      "record_amount": "3333",
+      "record_balance": "69023",
+      "recordId": 2,
+      "id": 21
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 6 : 45",
+      "record_amount": "12111",
+      "record_balance": "84467",
+      "recordId": 2,
+      "id": 22
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 7 : 2",
+      "record_amount": "122111",
+      "record_balance": "206578",
+      "recordId": 2,
+      "id": 23
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 9 : 0",
+      "record_amount": "700",
+      "record_balance": "205878",
+      "recordId": 2,
+      "id": 24
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 9 : 11",
+      "record_amount": "500",
+      "record_balance": "205378",
+      "recordId": 2,
+      "id": 25
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 9 : 22",
+      "record_amount": "700",
+      "record_balance": "204678",
+      "recordId": 2,
+      "id": 26
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 9 : 25",
+      "record_amount": "800",
+      "record_balance": "203878",
+      "recordId": 2,
+      "id": 27
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 9 : 28",
+      "record_amount": "1000",
+      "record_balance": "202878",
+      "recordId": 2,
+      "id": 28
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 7/ 2023",
+      "record_time": "17 : 9 : 29",
+      "record_amount": "900",
+      "record_balance": "201978",
+      "recordId": 2,
+      "id": 29
     }
   ]
 }

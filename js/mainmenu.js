@@ -11,6 +11,7 @@ let arrayAlter = [];
 let recObj;
 let recordArray;
 let popup = document.getElementById("popup");
+let notifyName = document.getElementById("notify");
 let accountInf = async () => {
   const res = await fetch("http://localhost:3000/loggedin");
   const data = await res.json();
@@ -25,19 +26,22 @@ buttons.map((button) => {
   button.addEventListener("click", () => {
     buttonVal = button.textContent;
     if (jsonbalance == zeroBal.Balance) {
-      alert("Insufficient Funds");
+      notifyName.innerHTML = "Insufficient Funds";
+      openPopup();
+
       return;
     } else {
       var newBal = jsonbalance - buttonVal;
       if (Math.sign(newBal) === -1) {
-        alert("Insufficient Funds");
+        notifyName.innerHTML = "Insufficient Funds";
+        openPopup();
         return;
       }
       objectBalance = {
         Balance: `${newBal}`,
       };
 
-      openPopup();
+      updateDb();
     }
   });
 });
@@ -54,6 +58,29 @@ let updateDb = async () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(objectBalance),
   });
+  await postRecords();
+};
+
+let postRecords = async () => {
+  const res = await fetch("http://localhost:3000/loggedin");
+  const json = await res.json();
+
+  let recordObj = {
+    record_type: "Withdraw",
+    record_date: `${
+      new Date().getMonth() + 1
+    } / ${new Date().getDate()}/ ${new Date().getFullYear()}`,
+    record_time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
+    record_amount: buttonVal,
+    record_balance: json[0].Balance,
+    recordId: json[0].id,
+  };
+
+  fetch("http://localhost:3000/records", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(recordObj),
+  });
 };
 
 otherBtn.addEventListener("click", () => {
@@ -67,25 +94,3 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open-popup");
 }
-
-/*
-
-let recordWdraw = async () => {
-  arrayAlter = recordArray;
-  arrayAlter.push({
-    date: new Date(),
-    balance: jsonbalance,
-  });
-
-  recObj = {
-    records: arrayAlter,
-  };
-
-  await fetch(myUrl, {
-    method: "PATCH",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(recObj),
-  });
-  
-};
-*/

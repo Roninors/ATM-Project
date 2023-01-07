@@ -2,102 +2,94 @@ let submitEl = document.getElementById("submitButton");
 let cancelBtn = document.getElementById("cancelBtn");
 let clearBtn = document.getElementById("clearBtn");
 let wdrawInp = document.getElementById("inp1");
+let notifyName = document.getElementById("notify");
 let withdrawAmount;
-submitEl.addEventListener("click", () => {
+let url1;
+let url2;
+let obj;
+let userBalance;
+submitEl.addEventListener("click", async () => {
+  const res = await fetch("http://localhost:3000/loggedin");
+  const json = await res.json();
+
   if (wdrawInp.value == "") {
-    alert("Enter Withdraw Amount");
+    notifyName.innerHTML = "Enter Withdraw Amount";
+    openPopup();
+
     return;
   } else {
     if (Math.sign(wdrawInp.value) === -1) {
-      alert("Do not put invalid values");
+      notifyName.innerHTML = "Do not put invalid values";
+      openPopup();
+
       return;
     }
-    wdrawFunc1()
-    //openPopup();
+
+    userBalance = json[0].balance;
+    withdrawAmount = document.getElementById("inp1").value;
+    let zeroBal = JSON.parse('{ "Balance": "0" }');
+
+    if (json[0].Balance == zeroBal.Balance) {
+      notifyName.innerHTML = "Insufficient Funds";
+      openPopup();
+      return;
+    } else {
+      var newBal = json[0].Balance - withdrawAmount;
+      if (Math.sign(newBal) === -1) {
+        notifyName.innerHTML = "Insufficient Funds";
+        openPopup();
+        return;
+      }
+
+      obj = {
+        Balance: `${newBal}`,
+      };
+
+      url1 = `http://localhost:3000/loggedin/${json[0].id}`;
+      url2 = `http://localhost:3000/members/${json[0].id}`;
+
+      await updateDB();
+    }
   }
 });
 
-let wdrawFunc1 = () => {
-  fetch("http://localhost:3000/loggedin")
-    .then((res) => res.json())
-    .then((json) => {
-       withdrawAmount = document.getElementById("inp1").value;
-      let zeroBal = JSON.parse('{ "Balance": "0" }');
-      if (json[0].Balance == zeroBal.Balance) {
-        alert("Insufficient Funds");
-        return;
-      } else {
-        var newBal = json[0].Balance - withdrawAmount;
-        if (Math.sign(newBal) === -1) {
-          alert("Insufficient Funds");
-          return;
-        }
-        var obj = {
-          Balance: `${newBal}`,
-        };
-        let url = `http://localhost:3000/loggedin/${json[0].id}`;
-
-        fetch(url, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(obj),
-        });
-        updateAdmin1();
-      }
-    })
-    .catch(function () {
-      console.log("error");
-    });
-};
-
-let updateAdmin1 = () => {
-  fetch("http://localhost:3000/loggedin")
-    .then((res) => res.json())
-    .then((json) => {
-      var obj2 = {
-        Balance: `${json[0].Balance}`,
-      };
-      let url = `http://localhost:3000/members/${json[0].id}`;
-
-      fetch(url, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(obj2),
-      });
-      postRecords()
-    })
-    .catch(function () {
-      console.log("error");
-    });
-};
-
-let postRecords =  ()=>{
-  fetch("http://localhost:3000/loggedin")
-  .then((res) => res.json())
-  .then((json) => {
-    var recordObj = {
-      record_type: "Withdraw",
-      record_date:`${new Date().getMonth()+1} / ${new Date().getDate()}/ ${new Date().getFullYear()}`,
-      record_time : `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
-      record_amount: withdrawAmount,
-      record_balance: json[0].Balance,
-      recordId: json[0].id
-    };
-    let url = `http://localhost:3000/records`;
-    fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(recordObj),
-    });
-    
-  })
-  .catch(function () {
-    console.log("error");
+let updateDB = async () => {
+  await fetch(url1, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj),
   });
-}
 
+  await fetch(url2, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj),
+  });
 
+  await postRecords();
+};
 
+let postRecords = async () => {
+  const res = await fetch("http://localhost:3000/loggedin");
+  const json = await res.json();
+
+  let recordObj = {
+    record_type: "Withdraw",
+    record_date: `${
+      new Date().getMonth() + 1
+    } / ${new Date().getDate()}/ ${new Date().getFullYear()}`,
+    record_time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
+    record_amount: withdrawAmount,
+    record_balance: json[0].Balance,
+    recordId: json[0].id,
+  };
+
+  fetch("http://localhost:3000/records", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(recordObj),
+  });
+};
 
 cancelBtn.addEventListener("click", () => {
   window.location.href = "mainmenu.html";
@@ -106,7 +98,7 @@ cancelBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   wdrawInp.value = "";
 });
-/*
+
 function openPopup() {
   popup.classList.add("open-popup");
 }
@@ -114,4 +106,3 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open-popup");
 }
-*/
