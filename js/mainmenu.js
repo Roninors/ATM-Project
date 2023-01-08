@@ -12,6 +12,8 @@ let recObj;
 let recordArray;
 let popup = document.getElementById("popup");
 let notifyName = document.getElementById("notify");
+let confirmBtn = document.getElementById("updateBtn");
+let closeBtn = document.getElementById("btn_holder");
 let accountInf = async () => {
   const res = await fetch("http://localhost:3000/loggedin");
   const data = await res.json();
@@ -26,6 +28,9 @@ buttons.map((button) => {
   button.addEventListener("click", () => {
     buttonVal = button.textContent;
     if (jsonbalance == zeroBal.Balance) {
+      closeBtn.innerHTML = "";
+      confirmBtn.textContent = "OK";
+      confirmBtn.setAttribute("onclick", "closePopup()");
       notifyName.innerHTML = "Insufficient Funds";
       openPopup();
 
@@ -33,6 +38,9 @@ buttons.map((button) => {
     } else {
       var newBal = jsonbalance - buttonVal;
       if (Math.sign(newBal) === -1) {
+        closeBtn.innerHTML = "";
+        confirmBtn.textContent = "OK";
+        confirmBtn.setAttribute("onclick", "closePopup()");
         notifyName.innerHTML = "Insufficient Funds";
         openPopup();
         return;
@@ -41,7 +49,12 @@ buttons.map((button) => {
         Balance: `${newBal}`,
       };
 
-      updateDb();
+      closeBtn.innerHTML = "<button onclick = 'closePopup()'>No</button>";
+      confirmBtn.textContent = "Yes";
+      notifyName.innerHTML =
+        "Are you sure you want to proceed with the transaction?";
+      openPopup();
+      confirmBtn.setAttribute("onclick", "updateDb()");
     }
   });
 });

@@ -7,26 +7,28 @@
     <script src="/js/redirector.js"></script>
     <script defer src="/js/wdraw.js"></script>
     <link rel="stylesheet" href="/css/wdraw.css" />
-    <link rel="stylesheet" href="/css/mainmenupop.css">
+    <link rel="stylesheet" href="/css/mainmenupop.css" />
+    <link rel="stylesheet" href="/css/confirmtransac.css" />
     <title>Document</title>
   </head>
   <body>
-    <a href="/html/mainmenu.html"
-      ><div class="back-container">
-        <img src="/pictures/back.png" alt="back" /></div
-    ></a>
-<form><input type="number" id="inp1" placeholder="Withdraw" /></form>
-    
+    <a href="/html/mainmenu.html">
+      <img src="/pictures/back.png" alt="back"
+    /></a>
+    <form><input type="number" id="inp1" placeholder="Withdraw" /></form>
+
     <div class="btn-container">
-      <button id = "submitButton"  class="grid-btn">Submit</button>
+      <button id="submitButton" class="grid-btn">Submit</button>
       <button id="cancelBtn" class="grid-btn">Cancel</button>
       <button id="clearBtn" class="grid-btn">Clear</button>
     </div>
 
     <div class="pop-container">
       <div class="popup" id="popup">
-        <p id  = "notify"></p>
-        <button onclick = "closePopup()">OK</button>
+        <p id="notify"></p>
+        <button id="updateBtn" onclick="closePopup()">OK</button>
+        <div id="btn_holder"></div>
       </div>
+    </div>
   </body>
 </html>

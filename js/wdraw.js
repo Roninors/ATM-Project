@@ -3,6 +3,8 @@ let cancelBtn = document.getElementById("cancelBtn");
 let clearBtn = document.getElementById("clearBtn");
 let wdrawInp = document.getElementById("inp1");
 let notifyName = document.getElementById("notify");
+let confirmBtn = document.getElementById("updateBtn");
+let closeBtn = document.getElementById("btn_holder");
 let withdrawAmount;
 let url1;
 let url2;
@@ -13,12 +15,18 @@ submitEl.addEventListener("click", async () => {
   const json = await res.json();
 
   if (wdrawInp.value == "") {
+    closeBtn.innerHTML = "";
+    confirmBtn.textContent = "OK";
+    confirmBtn.setAttribute("onclick", "closePopup()");
     notifyName.innerHTML = "Enter Withdraw Amount";
     openPopup();
 
     return;
   } else {
     if (Math.sign(wdrawInp.value) === -1) {
+      closeBtn.innerHTML = "";
+      confirmBtn.textContent = "OK";
+      confirmBtn.setAttribute("onclick", "closePopup()");
       notifyName.innerHTML = "Do not put invalid values";
       openPopup();
 
@@ -30,12 +38,18 @@ submitEl.addEventListener("click", async () => {
     let zeroBal = JSON.parse('{ "Balance": "0" }');
 
     if (json[0].Balance == zeroBal.Balance) {
+      closeBtn.innerHTML = "";
+      confirmBtn.textContent = "OK";
+      confirmBtn.setAttribute("onclick", "closePopup()");
       notifyName.innerHTML = "Insufficient Funds";
       openPopup();
       return;
     } else {
       var newBal = json[0].Balance - withdrawAmount;
       if (Math.sign(newBal) === -1) {
+        closeBtn.innerHTML = "";
+        confirmBtn.textContent = "OK";
+        confirmBtn.setAttribute("onclick", "closePopup()");
         notifyName.innerHTML = "Insufficient Funds";
         openPopup();
         return;
@@ -48,7 +62,12 @@ submitEl.addEventListener("click", async () => {
       url1 = `http://localhost:3000/loggedin/${json[0].id}`;
       url2 = `http://localhost:3000/members/${json[0].id}`;
 
-      await updateDB();
+      closeBtn.innerHTML = "<button onclick = 'closePopup()'>No</button>";
+      confirmBtn.textContent = "Yes";
+      notifyName.innerHTML =
+        "Are you sure you want to proceed with the transaction?";
+      openPopup();
+      confirmBtn.setAttribute("onclick", "updateDB()");
     }
   }
 });

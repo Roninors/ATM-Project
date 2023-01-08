@@ -12,9 +12,7 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="/html/menu.html"><div class = "back-container">
-      <img src="/pictures/back.png" alt="back">
-    </div></a>
+    <a href="/html/menu.html"><img src="/pictures/back.png" alt="back"></a>
     
     <div class = "titleHead">
       <h1>Choose Amount</h1>
@@ -31,10 +29,14 @@
       </div>
     </div>
     </div>
+
     <div class="pop-container">
       <div class="popup" id="popup">
         <p id  = "notify"></p>
-        <button onclick = "closePopup()">NO</button>
+        <button id = "updateBtn" onclick = "closePopup()">OK</button>
+        <div id = "btn_holder"></div>
+        </div>
       </div>
+  
   </body>
 </html>

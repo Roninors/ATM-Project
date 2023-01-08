@@ -57,14 +57,14 @@ input {
   transform: translateY(4px);
 }
 
-.back-container img{
+img{
   top:0;
   left:0;
   right:0;
 width: 80px;
 height: 80px;
 }
-.back-container img:active{
+ img:active{
   transform: translateY(10px);
   transition: .3s;
   

@@ -7,7 +7,7 @@ let accountnum = document.getElementById("accountnum");
 let balance = document.getElementById("balance");
 let userObj;
 let url;
-
+let bankRecords = document.getElementById("bankRec");
 
 let showAccounts = async () => {
   const res = await fetch("http://localhost:3000/members");
@@ -21,15 +21,15 @@ let showAccounts = async () => {
 document.addEventListener("DOMContentLoaded", showAccounts());
 
 let registerLoad = () => {
-  window.location.href = "/html/register.html"
-}
+  window.location.href = "/html/register.html";
+};
 //search function
 async function search() {
   let searchVal = document.getElementById("searchInp").value;
- if(!searchVal){
-  alert("Cannot Search")
-  return;
- }
+  if (!searchVal) {
+    alert("Cannot Search");
+    return;
+  }
 
   let url = `http://localhost:3000/members?q=${searchVal}`;
   const res = await fetch(url);

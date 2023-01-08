@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bankRecords.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bankRecords.css" />
     <script defer src="/js/bankRecords.js"></script>
     <title>Document</title>
-</head>
-<body></body>
+  </head>
+  <body>
     <div class="header">
-        <h1>Transaction Records</h1>
+      <a href="/html/menu.html"> <img src="/pictures/back.png" alt="back" /></a>
+      <h1 id="transactionHeader">Transaction Records</h1>
+    </div>
+
+    <div class="table-container">
+      <div class="tableForm">
+        <table style="width: 100%">
+          <tr>
+            <th>Transaction Type</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Amount</th>
+            <th>Balance</th>
+            <th></th>
+          </tr>
+          <tbody id="myTbody"></tbody>
+        </table>
       </div>
-  
-      <div class="table-container">
-        <div class="tableForm">
-          <table style="width: 100%">
-            <tr>
-              <th>Transaction Type</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Amount</th>
-              <th>Balance</th>
-            </tr>
-            <tbody id="myTbody"></tbody>
-          </table>
-        </div>
-      </div>
-</body>
+    </div>
+  </body>
 </html>

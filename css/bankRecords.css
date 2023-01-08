@@ -3,6 +3,9 @@
   font-family: "Poppins";
   margin: auto;
 }
+body{
+  background-color: rgb(95, 153, 240);
+}
 th,
 td,
 tr {
@@ -11,18 +14,38 @@ tr {
   padding: 10px;
 }
 th {
-  background-color: black;
+  background-color: rgb(75, 104, 201);
   color: white;
 }
 td {
   background-color: rgba(116, 108, 108, 0.178);
 }
 table {
+  background-color: aliceblue;
   border-collapse: collapse;
 }
-.editBtn {
+button {
   cursor: pointer;
 }
-.editBtn:hover {
-  color: rgb(231, 57, 57);
+
+img{
+  top:0;
+  left:0;
+  right:0;
+width: 80px;
+height: 80px;
+}
+ img:active{
+  transform: translateY(10px);
+  transition: .3s;
+  
+}
+
+#transactionHeader{
+  
+  color: white;
+  background-size: cover; 
+  background-color: rgb(95, 153, 240);
+  text-align: center;
+  
 }

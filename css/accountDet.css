@@ -82,13 +82,9 @@ body {
 }
 
 .pic-container {
-  border: 1px solid;
-
-  width: 120px;
-  height: 120px;
   position: relative;
-  right: 580px;
-  top: 120px;
+  right: 600px;
+  top: 70px;
   margin: -20px;
 }
 .btn-holder {
@@ -122,15 +118,14 @@ input {
   height: 120px;
 }
 
-
-.back-container img{
+ img{
   top:0;
   left:0;
   right:0;
 width: 80px;
 height: 80px;
 }
-.back-container img:active{
+ img:active{
   transform: translateY(10px);
   transition: .3s;
   

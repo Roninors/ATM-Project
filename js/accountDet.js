@@ -4,6 +4,7 @@ let url2;
 let pinObj;
 let userPassword;
 let userId;
+let bankBtn = document.getElementById("bankRecordBtn");
 let accountInf = async () => {
   const res = await fetch("http://localhost:3000/loggedin");
   const data = await res.json();
@@ -60,3 +61,7 @@ let updateDb = () => {
     });
   }, 1000);
 };
+
+bankBtn.addEventListener("click", () => {
+  window.location.href = "/html/bankRecords.html";
+});
