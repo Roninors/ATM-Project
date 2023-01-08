@@ -1,13 +1,6 @@
 {
-  "loggedin": [
-    {
-      "AccountName": "lola",
-      "passwordUser": "4567",
-      "AccountNum": "60452030",
-      "Balance": "173242",
-      "id": 10
-    }
-  ],
+  "adminLogin": [],
+  "loggedin": [],
   "admin": [
     {
       "username": "ronin",
@@ -55,7 +48,7 @@
       "AccountName": "Red",
       "passwordUser": "4789",
       "AccountNum": "19674789",
-      "Balance": "50000",
+      "Balance": "22199",
       "id": 6
     },
     {
@@ -573,6 +566,87 @@
       "record_balance": "173242",
       "recordId": 10,
       "id": 54
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 1 : 35",
+      "record_amount": "1000",
+      "record_balance": "49000",
+      "recordId": 6,
+      "id": 55
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 2 : 10",
+      "record_amount": "1000",
+      "record_balance": "NaN",
+      "recordId": 6,
+      "id": 56
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 2 : 12",
+      "record_amount": "900",
+      "record_balance": "NaN",
+      "recordId": 6,
+      "id": 57
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 2 : 15",
+      "record_amount": "800",
+      "record_balance": "NaN",
+      "recordId": 6,
+      "id": 58
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 2 : 17",
+      "record_amount": "700",
+      "record_balance": "NaN",
+      "recordId": 6,
+      "id": 59
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 2 : 19",
+      "record_amount": "500",
+      "record_balance": "NaN",
+      "recordId": 6,
+      "id": 60
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 2 : 53",
+      "record_amount": "100000",
+      "record_balance": "NaN",
+      "recordId": 6,
+      "id": 61
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 3 : 15",
+      "record_amount": "800",
+      "record_balance": "9200",
+      "recordId": 6,
+      "id": 62
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "16 : 5 : 41",
+      "record_amount": "12999",
+      "record_balance": "22199",
+      "recordId": 6,
+      "id": 63
     }
   ]
 }

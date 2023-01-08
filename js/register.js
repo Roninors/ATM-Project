@@ -6,9 +6,9 @@ let btnEl = document.getElementById("submitBtn");
 let uniqueId = Date.now();
 let stringId = String(uniqueId);
 let random_accountNumber = stringId.slice(5);
-let random_pin = stringId.slice(9);
+let random_pin = stringId.slice(11);
 accNum.value = random_accountNumber;
-pin.value = random_pin;
+pin.value = random_pin + 10;
 btnEl.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -34,6 +34,6 @@ btnEl.addEventListener("click", (event) => {
       body: JSON.stringify(regUser),
     });
 
-    window.location.href = `/html/adminpanel.html`
+    window.location.href = `/html/adminpanel.html`;
   }
 });

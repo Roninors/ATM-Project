@@ -7,9 +7,14 @@ let depBal;
 let url1;
 let url2;
 let obj;
+let confirmBtn = document.getElementById("updateBtn");
+let closeBtn = document.getElementById("btn_holder");
 
 let depFunc = async () => {
   if (depInp.value == "") {
+    closeBtn.innerHTML = "";
+    confirmBtn.textContent = "OK";
+    confirmBtn.setAttribute("onclick", "closePopup()");
     notifyName.innerText = "Please input amount to deposit";
     openPopup();
     return;

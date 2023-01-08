@@ -11,6 +11,15 @@ let adminFunc = async () => {
   let parsedpass = JSON.parse(`{"password":"${pass}" }`);
   if (parseduser.username == json.username) {
     if (parsedpass.password == json.password) {
+      loggedIn = {
+        username: json.username,
+        password: json.password,
+      };
+      await fetch("http://localhost:3000/adminLogin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(loggedIn),
+      });
       location.href = "adminpanel.html";
     } else {
       alert("Password Invalid");

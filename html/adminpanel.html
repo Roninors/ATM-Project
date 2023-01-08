@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/adminpanel.css" />
     <link rel="stylesheet" href="/css/adminpop.css" />
+    <script defer src="/js/adminRedirector.js"></script>
     <script defer src="/js/adminpanel.js"></script>
-    <title>Admin Page</title>
+    <title>Admin Panel</title>
   </head>
   <body>
     <div class="header">
@@ -15,6 +16,7 @@
       <input type="text" id="searchInp" />
       <button onclick="search() ">Search</button>
       <button onclick="registerLoad()">Register</button>
+      <button onclick="logout()">logout</button>
     </div>
 
     <div class="table-container">

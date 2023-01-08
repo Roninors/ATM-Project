@@ -109,6 +109,20 @@ async function updateDb() {
     body: JSON.stringify(userObj),
   });
 }
+
+let logout = async () => {
+  const res = await fetch("http://localhost:3000/adminLogin");
+  const data = await res.json();
+
+  await fetch(`http://localhost:3000/adminLogin/${data[0].id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
+
+  window.location.href = "/html/adminlog.html";
+};
 //variable
 let popup = document.getElementById("popup");
 //function to show popup by adding class list and also comes  with validation
