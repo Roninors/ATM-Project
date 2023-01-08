@@ -10,10 +10,10 @@
   ],
   "members": [
     {
-      "AccountName": "hello",
-      "passwordUser": "2322",
-      "AccountNum": "2222",
-      "Balance": "10381",
+      "AccountName": "Jann",
+      "passwordUser": "5555",
+      "AccountNum": "23215644",
+      "Balance": "9381",
       "id": 1
     },
     {
@@ -78,6 +78,13 @@
       "AccountNum": "60452030",
       "Balance": "173242",
       "id": 10
+    },
+    {
+      "AccountName": "John Silva",
+      "passwordUser": "3910",
+      "AccountNum": "87123139",
+      "Balance": "100000000",
+      "id": 11
     }
   ],
   "records": [
@@ -647,6 +654,33 @@
       "record_balance": "22199",
       "recordId": 6,
       "id": 63
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "22 : 14 : 26",
+      "record_amount": "1000",
+      "record_balance": "10381",
+      "recordId": 1,
+      "id": 64
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "22 : 15 : 16",
+      "record_amount": "1000",
+      "record_balance": "11381",
+      "recordId": 1,
+      "id": 65
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 8/ 2023",
+      "record_time": "22 : 15 : 49",
+      "record_amount": "2000",
+      "record_balance": "9381",
+      "recordId": 1,
+      "id": 66
     }
   ]
 }
