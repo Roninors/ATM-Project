@@ -1,14 +1,6 @@
 {
   "adminLogin": [],
-  "loggedin": [
-    {
-      "AccountName": "Jann",
-      "passwordUser": "5555",
-      "AccountNum": "23215644",
-      "Balance": "5261",
-      "id": 1
-    }
-  ],
+  "loggedin": [],
   "admin": [
     {
       "username": "ronin",
@@ -20,8 +12,8 @@
     {
       "AccountName": "Jann",
       "passwordUser": "5555",
-      "AccountNum": "23215644",
-      "Balance": "5261",
+      "AccountNum": "65656",
+      "Balance": "2.312312312312332e+37",
       "id": 1
     },
     {
@@ -93,6 +85,13 @@
       "AccountNum": "87123139",
       "Balance": "100000000",
       "id": 11
+    },
+    {
+      "AccountName": "Crankie",
+      "passwordUser": "1234",
+      "AccountNum": "34083397",
+      "Balance": "128933",
+      "id": 12
     }
   ],
   "records": [
@@ -896,6 +895,78 @@
       "record_balance": "5261",
       "recordId": 1,
       "id": 89
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "14 : 7 : 4",
+      "record_amount": "1000",
+      "record_balance": "4261",
+      "recordId": 1,
+      "id": 90
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "14 : 7 : 42",
+      "record_amount": "23123123123123321312312312312312312312",
+      "record_balance": "2.312312312312332e+37",
+      "recordId": 1,
+      "id": 91
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "15 : 3 : 38",
+      "record_amount": "700",
+      "record_balance": "101300",
+      "recordId": 12,
+      "id": 92
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "15 : 10 : 48",
+      "record_amount": "1555",
+      "record_balance": "102855",
+      "recordId": 12,
+      "id": 93
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "15 : 11 : 4",
+      "record_amount": "20000",
+      "record_balance": "122855",
+      "recordId": 12,
+      "id": 94
+    },
+    {
+      "record_type": "Deposit",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "15 : 11 : 12",
+      "record_amount": "7878",
+      "record_balance": "130733",
+      "recordId": 12,
+      "id": 95
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "15 : 12 : 24",
+      "record_amount": "800",
+      "record_balance": "129933",
+      "recordId": 12,
+      "id": 96
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "15 : 12 : 50",
+      "record_amount": "1000",
+      "record_balance": "128933",
+      "recordId": 12,
+      "id": 97
     }
   ]
 }

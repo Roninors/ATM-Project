@@ -10,6 +10,7 @@ let obj;
 let confirmBtn = document.getElementById("updateBtn");
 let closeBtn = document.getElementById("btn_holder");
 
+
 let depFunc = async () => {
   if (depInp.value == "") {
     closeBtn.innerHTML = "";
@@ -31,7 +32,14 @@ let depFunc = async () => {
   url1 = `http://localhost:3000/loggedin/${json[0].id}`;
   url2 = `http://localhost:3000/members/${json[0].id}`;
 
-  await updateDb();
+
+  closeBtn.innerHTML = "<button onclick = 'closePopup()'>No</button>";
+  confirmBtn.textContent = "Yes";
+  notifyName.innerHTML =
+    "Are you sure you want to proceed with the transaction?";
+  openPopup();
+  confirmBtn.setAttribute("onclick", "updateDb()");
+
 };
 
 let updateDb = async () => {
@@ -55,9 +63,8 @@ let postRecords = async () => {
 
   let recordObj = {
     record_type: "Deposit",
-    record_date: `${
-      new Date().getMonth() + 1
-    } / ${new Date().getDate()}/ ${new Date().getFullYear()}`,
+    record_date: `${new Date().getMonth() + 1
+      } / ${new Date().getDate()}/ ${new Date().getFullYear()}`,
     record_time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
     record_amount: depAmount,
     record_balance: json[0].Balance,

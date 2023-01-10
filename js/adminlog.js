@@ -1,5 +1,4 @@
 let submitBtn = document.getElementById("submitBtn");
-
 let adminFunc = async () => {
   const res = await fetch("http://localhost:3000/admin/1");
   const json = await res.json();
