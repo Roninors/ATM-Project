@@ -72,7 +72,7 @@ let postRecords = async () => {
 };
 
 cancelBtn.addEventListener("click", () => {
-  window.location.href = "menu.html";
+  window.location.href = "../html/menu.html";
 });
 
 clearBtn.addEventListener("click", () => {

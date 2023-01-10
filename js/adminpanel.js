@@ -21,7 +21,7 @@ let showAccounts = async () => {
 document.addEventListener("DOMContentLoaded", showAccounts());
 
 let registerLoad = () => {
-  window.location.href = "/html/register.html";
+  window.location.href = "../html/register.html";
 };
 //search function
 async function search() {
@@ -121,7 +121,7 @@ let logout = async () => {
     },
   });
 
-  window.location.href = "/html/adminlog.html";
+  window.location.href = "../html/adminlog.html";
 };
 //variable
 let popup = document.getElementById("popup");

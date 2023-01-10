@@ -38,5 +38,5 @@ let postUserlogin = async () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(loggedIn),
   });
-  window.location.href = "menu.html";
+  window.location.href = "../html/menu.html";
 };

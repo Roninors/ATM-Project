@@ -63,5 +63,5 @@ let updateDb = () => {
 };
 
 bankBtn.addEventListener("click", () => {
-  window.location.href = "/html/bankRecords.html";
+  window.location.href = "../html/bankRecords.html";
 });

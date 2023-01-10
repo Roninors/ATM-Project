@@ -3,7 +3,7 @@ let redirect = async () => {
     const data = await res.json();
   
     if (data == "") {
-      window.location.href = "/html/atm.html";
+      window.location.href = "../html/atm.html";
     }
   };
   document.addEventListener("DOMContentLoaded", redirect());

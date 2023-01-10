@@ -54,7 +54,7 @@ buttons.map((button) => {
       notifyName.innerHTML =
         "Are you sure you want to proceed with the transaction?";
       openPopup();
-      confirmBtn.setAttribute("onclick", "updateDb()");
+      confirmBtn.setAttribute("onclick", "updateDb();");
     }
   });
 });
@@ -97,7 +97,7 @@ let postRecords = async () => {
 };
 
 otherBtn.addEventListener("click", () => {
-  window.location.href = "wdraw.html";
+  window.location.href = "../html/wdraw.html";
 });
 
 function openPopup() {

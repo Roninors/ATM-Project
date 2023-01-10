@@ -34,6 +34,6 @@ btnEl.addEventListener("click", (event) => {
       body: JSON.stringify(regUser),
     });
 
-    window.location.href = `/html/adminpanel.html`;
+    window.location.href = `../html/adminpanel.html`;
   }
 });

@@ -11,5 +11,5 @@ logoutBtn.addEventListener("click", async () => {
     },
   });
 
-  window.location.href = "/html/atm.html";
+  window.location.href = "../html/atm.html";
 });

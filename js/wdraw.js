@@ -67,7 +67,7 @@ submitEl.addEventListener("click", async () => {
       notifyName.innerHTML =
         "Are you sure you want to proceed with the transaction?";
       openPopup();
-      confirmBtn.setAttribute("onclick", "updateDB()");
+      confirmBtn.setAttribute("onclick", "updateDB();");
     }
   }
 });
@@ -111,7 +111,7 @@ let postRecords = async () => {
 };
 
 cancelBtn.addEventListener("click", () => {
-  window.location.href = "mainmenu.html";
+  window.location.href = "../html/mainmenu.html";
 });
 
 clearBtn.addEventListener("click", () => {

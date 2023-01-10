@@ -1,6 +1,14 @@
 {
   "adminLogin": [],
-  "loggedin": [],
+  "loggedin": [
+    {
+      "AccountName": "Jann",
+      "passwordUser": "5555",
+      "AccountNum": "23215644",
+      "Balance": "5261",
+      "id": 1
+    }
+  ],
   "admin": [
     {
       "username": "ronin",
@@ -13,7 +21,7 @@
       "AccountName": "Jann",
       "passwordUser": "5555",
       "AccountNum": "23215644",
-      "Balance": "9381",
+      "Balance": "5261",
       "id": 1
     },
     {
@@ -681,6 +689,213 @@
       "record_balance": "9381",
       "recordId": 1,
       "id": 66
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 27 : 35",
+      "record_amount": "10",
+      "record_balance": "9371",
+      "recordId": 1,
+      "id": 67
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 27 : 36",
+      "record_amount": "10",
+      "record_balance": "9371",
+      "recordId": 1,
+      "id": 68
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 27 : 56",
+      "record_amount": "10",
+      "record_balance": "9361",
+      "recordId": 1,
+      "id": 69
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 28 : 2",
+      "record_amount": "10",
+      "record_balance": "9361",
+      "recordId": 1,
+      "id": 70
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 28 : 9",
+      "record_amount": "10",
+      "record_balance": "9361",
+      "recordId": 1,
+      "id": 71
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 29 : 27",
+      "record_amount": "800",
+      "record_balance": "8561",
+      "recordId": 1,
+      "id": 72
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 29 : 31",
+      "record_amount": "800",
+      "record_balance": "8561",
+      "recordId": 1,
+      "id": 73
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 29 : 31",
+      "record_amount": "800",
+      "record_balance": "8561",
+      "recordId": 1,
+      "id": 74
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 29 : 31",
+      "record_amount": "800",
+      "record_balance": "8561",
+      "recordId": 1,
+      "id": 75
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 29 : 31",
+      "record_amount": "800",
+      "record_balance": "8561",
+      "recordId": 1,
+      "id": 76
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 34 : 29",
+      "record_amount": "700",
+      "record_balance": "7861",
+      "recordId": 1,
+      "id": 77
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 34 : 35",
+      "record_amount": "700",
+      "record_balance": "7861",
+      "recordId": 1,
+      "id": 78
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 35 : 15",
+      "record_amount": "700",
+      "record_balance": "7861",
+      "recordId": 1,
+      "id": 79
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 35 : 16",
+      "record_amount": "700",
+      "record_balance": "7861",
+      "recordId": 1,
+      "id": 80
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 42 : 22",
+      "record_amount": "700",
+      "record_balance": "7161",
+      "recordId": 1,
+      "id": 81
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 42 : 35",
+      "record_amount": "700",
+      "record_balance": "7161",
+      "recordId": 1,
+      "id": 82
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 44 : 56",
+      "record_amount": "700",
+      "record_balance": "7161",
+      "recordId": 1,
+      "id": 83
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 46 : 41",
+      "record_amount": "700",
+      "record_balance": "6461",
+      "recordId": 1,
+      "id": 84
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 47 : 35",
+      "record_amount": "1000",
+      "record_balance": "6161",
+      "recordId": 1,
+      "id": 85
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 47 : 54",
+      "record_amount": "700",
+      "record_balance": "6461",
+      "recordId": 1,
+      "id": 86
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 48 : 29",
+      "record_amount": "700",
+      "record_balance": "5761",
+      "recordId": 1,
+      "id": 87
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 48 : 55",
+      "record_amount": "700",
+      "record_balance": "5761",
+      "recordId": 1,
+      "id": 88
+    },
+    {
+      "record_type": "Withdraw",
+      "record_date": "1 / 10/ 2023",
+      "record_time": "2 : 48 : 58",
+      "record_amount": "500",
+      "record_balance": "5261",
+      "recordId": 1,
+      "id": 89
     }
   ]
 }

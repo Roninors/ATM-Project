@@ -20,7 +20,7 @@ let adminFunc = async () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loggedIn),
       });
-      location.href = "adminpanel.html";
+      location.href = "../html/adminpanel.html";
     } else {
       alert("Password Invalid");
     }
